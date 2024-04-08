@@ -15,7 +15,7 @@ set t_Co=256
 set cursorline
 set spell
 set visualbell
-set clipboard=unnamedplus,unnamed
+set clipboard=unnamedplus
 set display=lastline
 set belloff=all
 syntax on
@@ -48,10 +48,10 @@ Plug 'junegunn/fzf'
 
 call plug#end()
 
-let g:coc_global_extensions = ["coc-clangd", "coc-pyright", "coc-json", "coc-html", "coc-html-css-support", "coc-go"]
+let g:coc_global_extensions = ["coc-clangd", "coc-pyright", "coc-json", "coc-html", "coc-html-css-support", "coc-go", "coc-markdownlint", "coc-sql", "coc-vimlsp","coc-sh","@yaegassy/coc-intelephense"]
 let g:go_def_mapping_enabled = 0
 
-color habamax
+color slate
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 
@@ -70,6 +70,8 @@ inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 
 inoremap <c-b> <Esc>:NERDTreeToggle<cr>
 nnoremap <c-b> <Esc>:NERDTreeToggle<cr>
+
+nnoremap <c-f> <Esc>:FZF <cr>
 
 nnoremap <leader>bn :bnext<CR> " Switch to the next buffer
 nnoremap <leader>bp :bprevious<CR> " Switch to the previous buffer
