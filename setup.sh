@@ -1,8 +1,10 @@
 #!/bin/bash
 
-cp ./.vimrc ~
+export config=~/configs
 
-cp ./coc-settings.json ~/.vim
+cp $config/.vimrc ~
 
-cp ./.bash_aliases ~
+cp $config/coc-settings.json ~/.vim
+
+cp $config/.bash_aliases ~
 
